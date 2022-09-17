@@ -397,6 +397,10 @@ GEM
       state_machines-activerecord (~> 0.6)
     solidus_sample (3.2.2)
       solidus_core (= 3.2.2)
+    solidus_stripe (4.3.0)
+      activemerchant (>= 1.105)
+      solidus_core (>= 2.3, < 4)
+      solidus_support (~> 0.8)
     solidus_support (0.9.1)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
@@ -484,6 +488,7 @@ DEPENDENCIES
   solidus_backend
   solidus_core
   solidus_sample
+  solidus_stripe (~> 4.3)
   solidus_support
   sprockets-rails
   sqlite3 (~> 1.4)

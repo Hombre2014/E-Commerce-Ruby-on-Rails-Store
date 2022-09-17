@@ -50,6 +50,17 @@ Spree.config do |config|
   #   server: Rails.env.production? ? 'production' : 'test',
   #   test_mode: !Rails.env.production?
   # )
+
+  # From solidus_stripe gem
+  config.static_model_preferences.add(
+    Spree::PaymentMethod::StripeCreditCard,
+    'stripe_env_credentials',
+    secret_key: ENV['STRIPE_SECRET_KEY'],
+    publishable_key: ENV['STRIPE_PUBLISHABLE_KEY'],
+    stripe_country: 'US',
+    v3_elements: false,
+    v3_intents: false
+  )
 end
 
 Spree::Backend::Config.configure do |config|
