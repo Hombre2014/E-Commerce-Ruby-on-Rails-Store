@@ -71,6 +71,11 @@ group :test do
   gem "webdrivers"
 end
 
+group :production do
+  # Use postgresql as the database for Active Record
+  gem "pg"
+end
+
 gem "solidus_auth_devise"
 
 gem "solidus_core", ">= 0"
